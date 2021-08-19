@@ -1,4 +1,4 @@
-package com.company.u0_recursividad;
+package infoIII.u1_recursividad;
 
 public class Ej7 {
 
