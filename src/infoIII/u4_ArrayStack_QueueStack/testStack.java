@@ -7,8 +7,10 @@ public class testStack {
     public static void main(String[] args) {
         Stack<Integer> miStack = new Stack<>();
 
-        // {[(3 + 5 * 4)] + {(5 - 8) -3  * 5}}
-        // 3 5 + 4 * 8 +
-        //     8 4 *
+        // 2 - (3 + 5 * 4)
+        // 2 3 5 + 4 * -
+        // 2   8 4 * -
+        // 2    32 -
+        // -30
     }
 }
