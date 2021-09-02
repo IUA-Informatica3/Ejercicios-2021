@@ -1,4 +1,4 @@
-package infoIII.u0_analisis;
+package infoIII.u1_analisis_de_algoritmos;
 
 public class Ej1 {
 

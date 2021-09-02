@@ -1,5 +1,8 @@
-package infoIII.u2_ordenamiento;
+package infoIII.u3_ordenamiento;
 
+/**
+ * Example class used for sorting implementing Comparable.
+ */
 public class Auto implements Comparable<Auto> {
     String patente;
 

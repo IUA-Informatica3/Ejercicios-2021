@@ -1,29 +1,47 @@
-package infoIII.u0_analisis;
+package infoIII.u1_analisis_de_algoritmos;
 
 
 import java.util.Arrays;
 
-public class Ej6 {
+public class Ej11 {
 
     public static void main(String[] args) {
-        int[] a1 = new int[7000];
+        int[] a1 = new int[100];
+        int[] a2 = new int[200];
         for (int i = 0; i < a1.length; i++) {
             a1[i] = (int) (Math.random() * 10000);
         }
-        Arrays.sort(a1);
-        System.out.println(efficientSearch(a1, 325));
+        for (int i = 0; i < a2.length; i++) {
+            a2[i] = (int) (Math.random() * 10000);
+        }
+
+        System.out.println(intersection(a1, a2));
 
     }
 
     /**
-     * Search de value item in the array ( array values must be ordered)
+     * Calculates the number of elements in common between the arrays
      * Algorithm of order
      * O(   )
      *
-     * @param array Where to search
-     * @param item  What to search
-     * @return position where item was found
+     * @param a first array
+     * @param b second array
+     * @return Number of elements in common
      */
+    static int intersection(int[] a, int[] b) {
+
+        Arrays.sort(a);
+        Arrays.sort(b);
+        int intersect = 0;
+        for (int x : a) {
+            if (efficientSearch(b, x) >= 0) {
+                intersect++;
+            }
+        }
+
+        return intersect;
+    }
+
     public static int efficientSearch(int[] array, int item) {
         int minIndex = 0;
         int maxIndex = array.length - 1;

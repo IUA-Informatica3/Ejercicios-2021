@@ -1,4 +1,4 @@
-package infoIII.u1_recursividad;
+package infoIII.u2_recursividad;
 
 public class Ej1 {
 
