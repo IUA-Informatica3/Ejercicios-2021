@@ -17,7 +17,7 @@ import java.util.zip.GZIPInputStream;
 
 public class ej2 {
     public static void main(String[] args) {
-        String[] filenames = new String[]{"es.txt.gz", "eso.txt.gz", "esi.txt.gz",};
+        String[] filenames = new String[]{"es100k.txt.gz", "eso100k.txt.gz", "esi100k.txt.gz",};
         String line;
         ArrayList<String> palabras = new ArrayList<>();
         String[] arr;
