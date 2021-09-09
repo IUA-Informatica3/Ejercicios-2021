@@ -13,40 +13,44 @@ package infoIII.Estructuras;
 
 /**
  * Protocol for queues.
+ *
  * @author Mark Allen Weiss
  */
-public interface Queue<AnyType>
-{
+public interface Queue<AnyType> {
     /**
      * Insert a new item into the queue.
+     *
      * @param x the item to insert.
      */
-    void  enqueue( AnyType x );
+    void enqueue(AnyType x);
 
     /**
      * Get the least recently inserted item in the queue.
      * Does not alter the queue.
+     *
      * @return the least recently inserted item in the queue.
-     * @exception Exception if the queue is empty.
+     * @throws Exception if the queue is empty.
      */
-    AnyType getFront( ) throws Exception;
+    AnyType getFront() throws Exception;
 
     /**
      * Return and remove the least recently inserted item
      * from the queue.
+     *
      * @return the least recently inserted item in the queue.
-     * @exception Exception if the queue is empty.
+     * @throws Exception if the queue is empty.
      */
-    AnyType dequeue( ) throws Exception;
+    AnyType dequeue() throws Exception;
 
     /**
      * Test if the queue is logically empty.
+     *
      * @return true if empty, false otherwise.
      */
-    boolean isEmpty( );
+    boolean isEmpty();
 
     /**
      * Make the queue logically empty.
      */
-    void makeEmpty( );
+    void makeEmpty();
 }
