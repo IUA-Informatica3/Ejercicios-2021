@@ -118,7 +118,17 @@ public class BinarySearchTree<AnyType extends Comparable<AnyType>> {
     }
 
     private int depth(TreeNode<AnyType> n) {
-        return -1;
+        if (n == null)
+            return 0;
+
+        int depthRight = depth(n.right);
+        int depthLeft = depth(n.left);
+
+        if (depthLeft > depthRight) {
+            return 1 + depthLeft;
+        } else {
+            return 1 + depthRight;
+        }
     }
 
     public int contarPorNivel(int nivel) {
@@ -145,12 +155,8 @@ public class BinarySearchTree<AnyType extends Comparable<AnyType>> {
         try {
             for (int i = 0; i < 10; i++) {
                 avl.insert(i);
-                //arbol.insert(i);
             }
             avl.print();
-
-            //  arbol.print();
-
 
             arbol.insert(5);
             arbol.insert(3);
@@ -160,6 +166,8 @@ public class BinarySearchTree<AnyType extends Comparable<AnyType>> {
             arbol.insert(6);
             arbol.insert(10);
             arbol.delete(5);
+            arbol.insert(0);
+            System.out.println("Prof: " + arbol.depth());
         } catch (Exception e) {
             System.out.println(e.toString());
         }
@@ -169,7 +177,7 @@ public class BinarySearchTree<AnyType extends Comparable<AnyType>> {
         } catch (Exception e) {
             System.out.println(e.toString());
         }
-        // arbol.print();
+        arbol.print();
 
         BinarySearchTree<Car> autos = new BinarySearchTree<>();
 
@@ -185,7 +193,6 @@ public class BinarySearchTree<AnyType extends Comparable<AnyType>> {
         } catch (Exception e) {
             System.out.println(e);
         }
-
 
     }
 }
